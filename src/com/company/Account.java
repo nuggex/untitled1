@@ -1,13 +1,13 @@
 package com.company;
 
-public class Account {
+class Account {
 
     private String username;
     private int birthYear;
     private int birthMonth;
     private int birthDay;
     Account[] list = new Account[10];
-    public boolean setUsername(String u) {
+    boolean setUsername(String u) {
         if (u.length() == 8) {
             username = u;
 
@@ -19,7 +19,7 @@ public class Account {
 
     }
 
-    public boolean setbirthYear(int n) {
+    boolean setbirthYear(int n) {
         if (n >= 0 && n <= 2019) {
             birthYear = n;
             return true;
@@ -29,7 +29,7 @@ public class Account {
         }
     }
 
-    public boolean setbirthMonth(int n) {
+    boolean setbirthMonth(int n) {
         if (n >= 0 && n <= 13) {
             birthMonth = n;
             return true;
@@ -39,7 +39,7 @@ public class Account {
         }
     }
 
-    public boolean setbirthDay(int n) {
+    boolean setbirthDay(int n) {
         if (n >= 0 && n <= 31) {
             birthDay = n;
             return true;
@@ -49,12 +49,12 @@ public class Account {
         }
     }
 
-    public void getPerson() {
+    void getPerson() {
 
         System.out.println("Användare: " + username);
         System.out.print("Född : " + birthYear + ", " + birthMonth + ", " + birthDay);
     }
-    public void setList(int i){
+    void setList(int i){
         for (int j=0;j<i;j++){
         list[i].username = username;
         list[i].birthYear = birthYear;
